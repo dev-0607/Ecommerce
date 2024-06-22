@@ -5,7 +5,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
@@ -14,11 +14,11 @@ export class SignupComponent {
     username : new FormControl('',[Validators.required,Validators.pattern('[azA-Z]')]),
     entphno :new FormControl('',[Validators.required,]),
     mail :new FormControl('',[Validators.required,Validators.email]),
-    entpswd:new FormControl('',[Validators.required,Validators.minLength(6)]),
+    entpswd:new FormControl('',[Validators.required,Validators.minLength(7)]),
 
   })
   loginuser(){
-    console.log(this.logindata.value)
+    console.log(this.logindata.value )
   }
   get user(){
     return this.logindata.get('username')
