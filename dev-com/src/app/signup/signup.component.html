@@ -1,1 +1,26 @@
 <p>signup works!</p>
+<form [formGroup]="logindata" (ngSubmit)="loginuser()">
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" formControlName="username">
+      <span style = "color :red;"*ngIf="user && user.invalid && user.touched">This field is not valid</span>
+<br>
+      <label for="psw"><b>MobileNo</b></label>
+      <input type="text" placeholder="Enter phone no" name="phoneno" formControlName="entphno">
+      <span style = "color :red;" *ngIf="phno && phno.invalid && phno.touched">This field is not valid</span>
+<br>
+      <label for="psw"><b>mailid</b></label>
+      <input type="text" placeholder="Enter mail no" name="mail" formControlName="mail">
+      <span style = "color :red;"*ngIf="mail && mail.invalid && mail.touched">This field is not valid</span>
+<br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" formControlName="entpswd">
+      <span style = "color :red;"*ngIf="password && password.invalid && password.touched">This field is not valid</span>
+<br>
+      <button type="submit">Login</button>
+
+    </div>
+  
+  </form>
+  
